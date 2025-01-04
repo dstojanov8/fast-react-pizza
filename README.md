@@ -52,12 +52,12 @@ Necessary Pages:
 
 **Tech Decisions:**
 
-1. Routing: React Router (standard for React SPAs)
-2. Styling: Tailwindcss (trendy way of styling applications)
-3. Remote state management: React Router (new way of fetching data right inside React Router)
+1. Routing: `React Router` (standard for React SPAs)
+2. Styling: `Tailwindcss` (trendy way of styling applications)
+3. Remote state management: `React Router` (new way of fetching data right inside React Router)
    - **render-as-you-fetch** instead of **fetch-on-render**
    - not really state **management**, as it doesn't persist state
-4. UI state management: Redux
+4. UI state management: `Redux`
 
 ## Configure eslint
 
