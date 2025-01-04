@@ -35,20 +35,17 @@ When we build lagre and more realworld applications:
 
 ## (2, 3, 4) Features, Pages and State Management + Tech Decisions
 
-Feature Categories -> State Management:
+Feature Categories -> State Management -> Necessary pages:
 
 1. User -> Global UI state (no accounts, so stays in app)
+   - Homepage `/`
 2. Menu -> Global remote state (menu is fetched from API)
+   - Pizza menu `/menu`
 3. Cart -> Global UI state (no need for API, just stored in app)
+   - Cart `/cart`
 4. Order -> Global remote state (fetched and submitted to API)
-
-Necessary Pages:
-
-1. Homepage `/`
-2. Pizza menu `/menu`
-3. Cart `/cart`
-4. Placing a new order `/order/new`
-5. Looking up an order `/order/:orderID`
+   - Placing a new order `/order/new`
+   - Looking up an order `/order/:orderID`
 
 **Tech Decisions:**
 
