@@ -14,7 +14,12 @@ When we build lagre and more realworld applications:
 
 1. Gather application **requirements and features**
 2. Devide the application into **pages**
+   Think about the **overal** and **page-level** UI
+   Break the desired UI into **components**
+   Design thd build a **static** version (no state yet)
 3. Devide the application into **feature categories**
+   Think about **state management + dataflow**
+4. Decide on what **libraries** to use (technology decisions)
 
 ## Configure eslint
 
