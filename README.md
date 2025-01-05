@@ -30,7 +30,7 @@ When we build lagre and more realworld applications:
 10. Each order will get a **unique ID** that should be displayed, so the **user can later look up their order** based on the ID
 11. Users should be able to mark their order as "priority" order **even after it has been placed**
 
-## (2, 3, 4) Features, Pages and State Management + Tech Decisions
+## (2, 3) Features, Pages and State Management
 
 Feature Categories -> State Management -> Necessary pages:
 
@@ -44,7 +44,7 @@ Feature Categories -> State Management -> Necessary pages:
    - Placing a new order `/order/new`
    - Looking up an order `/order/:orderID`
 
-**Tech Decisions:**
+## 4. **Tech Decisions:**
 
 1. Routing: `React Router` (standard for React SPAs)
 2. Styling: `Tailwindcss` (trendy way of styling applications)
