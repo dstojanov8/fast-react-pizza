@@ -8,3 +8,7 @@
    - We use that **Loader** function inside our `App.jsx` file got `/menu/` route
    - We use a custom hook `useLoaderData()` to get that data into the `Menu.jsx` component
    - **Loaders** use `render-as-you-fetch` strategy and replace _useEffect_ hook (`fetch-on-render`), **this is how data loading works in modern React Router**
+4. In `AppLayout.jsx` we added logic for displaying loading indicator. With `useNavigation()` hook we can get the application state (idle, loading, submitting) and based on that we dispay a loading animation. If one of the pages is loading then the navigation state will become loading.
+5. Handling an **_Error_** is displayed in `App.jsx` component in `createBrowserRouter`. In parent route we added `errorElement: <Error />` to indicate that the app should render `<Error />` component in case of an error. In `Error.jsx` component we are use `useRouteError()` hook to get the error message.
+   - in case of an error inside the **Loader** (ex. Failed to fetch error) we want to have errorElement as well in the route where we use the **Loader**, therefore we put in in the `/menu` route as well.
+   - errors bubble up so that is why we put errorElement in the parent route in case it is not handled by the route the error happened in
