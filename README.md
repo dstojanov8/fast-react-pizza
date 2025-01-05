@@ -1,7 +1,7 @@
 # Project Overview
 
-[Eslint configuration](docs/ESLINT_CONFIG.md)
-[Code Guide](docs/CODE_GUIDE.md)
+- [Eslint configuration](docs/ESLINT_CONFIG.md)
+- [Code Guide](docs/CODE_GUIDE.md)
 
 ## How to **plan** and **build** a React application
 
