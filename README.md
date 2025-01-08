@@ -1,5 +1,10 @@
 # Project Overview
 
+One of the main subjects of the project are **_Loaders_** and **_Actions_**. **_Loaders_** are used to read data, **_Actions_** are used to write/mutate data (state that is stored on the server).
+
+- **_Loader_** example is in the _Code Guide_ numbers **_3. and 7._** (files `Menu.jsx` and `Order.jsx`).
+- **_Action_** example is also in _Code Guide_ under number **_8._** (file `CreateOrder.jsx`).
+
 - [Eslint configuration](docs/ESLINT_CONFIG.md)
 - [Code Guide](docs/CODE_GUIDE.md)
 

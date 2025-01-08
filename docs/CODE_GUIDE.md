@@ -2,7 +2,7 @@
 2. As a wrapper for our whole application we are using `AppLayout` component. Here we defined our `Header` and `Footer` components (in this case `<CartOverview />`)
    - In our new router we are using this component as **parent route**
    - In this component we are using `<Outlet />` in order to render nested routes
-3. In our `Menu.jsx` component we created our **Loader** function.
+3. In our `Menu.jsx` component we created our **_Loader_** function.
    - **Loader** is a function that fetches some data from an API. We then provide that **Loader** function to one of our _routes_ and that _route_ will then fetch that data as soon as the application goes to that route. Once the data has arrived, it will be provided to the page component itself using a custom hook.
    - 1. We place the **Loader** for a certain page inside the file of that page (menu loader in Menu Component)
    - 2. We use that **Loader** function inside our `App.jsx` file got `/menu/` route
@@ -15,3 +15,7 @@
 6. `SearchOrder.jsx` component is used to fetch a specific order, we use **_useNavigate_** hook to set query params
 7. We also use a **_Loader_** function in `Order.jsx`. Here it is a little bit different as we are using params to fetch an object with an id, for more information chect `Order.jsx`
    - The othere process is the same as for `Menu.jsx`
+8. For creating new orders we utilized **_Actions_** provided to us by `React Router`.
+   - in `CreateOrder.jsx` file import `<Form>` component, here we can write a path this form will be submitted to (by default react-router will match the closest route and we don't need to specify it)
+   - whenever the `<Form>` is submitted react-router will call the **_Action_** function and will pass in the request that was submitted
+   - we create an **_Action_** function similarly to when we created a **_Loader_** and pass it to the router, check in _App.jsx_ `action: createOrderAction`
