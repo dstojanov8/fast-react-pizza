@@ -7,6 +7,7 @@ One of the main subjects of the project are **_Loaders_** and **_Actions_**. **_
 
 - [Eslint configuration](docs/ESLINT_CONFIG.md)
 - [Code Guide](docs/CODE_GUIDE.md)
+- [Tailwind CSS](docs/TAILWIND_CSS.md)
 
 ## How to **plan** and **build** a React application
 
