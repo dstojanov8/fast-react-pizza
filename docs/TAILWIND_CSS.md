@@ -30,7 +30,7 @@ To use **Tailwind** we need to follow all the necessary steps from the documenta
    - create a prettier config file `.prettierrc` and add `{ "plugins": ["prettier-plugin-tailwindcss"] `}
    - all steps can be found on link: https://github.com/tailwindlabs/prettier-plugin-tailwindcss
 
-## Tailwind usage
+# Tailwind usage
 
 On the officia website always check what you want to style. Tailwind classes can be used in JSX as well as in HTML (check `index.html`)
 
@@ -53,3 +53,31 @@ _Border_ example can be seen in `Header.jsx`. We write _border-b_ to add a borde
 To add spacing between child elements, on the parent we use `space-x-4` (x for x-axis direction and 4 for value)
 
 For **Dispay** we would just write: `flex`, `grid` etc. We have an example of using `hidden` in `Username.jsx` component where we hide a div on small screens.
+
+### Responsive Design
+
+By default Tailwind comes with 5 breakpoints, they are mobile first. There is a whole section in Tailwind docs `Core Concepts > Responsive Design`. We basically prefix any of the tailwind class names with one of the **_breakpoint prefixes_**
+
+- `sm`: 640px => class will be applied when size greater than
+- `md`: 768px => class will be applied when size greater than
+- `lg`: 1024px => class will be applied when size greater than
+- `xl`: 1280 => class will be applied when size greater than
+- `2xl`: 1536 => class will be applied when size greater than
+
+In `Home.jsx` we have `sm:my-16` **_Whenever the width is greater than 640 `my-16` will override the default value_**. Default classes, without any prefix, are mobile first classes. They apply only if there is no breakpoint overriding them.
+
+## Tailwind Layouts
+
+### Flexbox
+
+In `CartOverview.jsx` we implemented Flexbox by using `flex items-center justify-between`. In `Username.jsx` we have example with `md:block` which is just `display: block;` on a certain width.
+
+### Grid
+
+In `AppLayout.jsx` we are using grid layout. As an example we can set class names `grid grid-rows-3`, where we are creating three rows of the same size.
+
+What we will be using is `grid h-screen grid-rows-[auto_1fr_auto]`
+
+- `grid` set display: grid;
+- `grid-rows-[auto_1fr_auto]` we are deifing a number of rows (3) and their height, with `auto` out top and bottom row will have height to fit the content.
+- `h-screen` sets the height to 100vh, in our case the middle row wil epxand to fit the screen.
