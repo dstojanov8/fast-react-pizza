@@ -79,5 +79,33 @@ In `AppLayout.jsx` we are using grid layout. As an example we can set class name
 What we will be using is `grid h-screen grid-rows-[auto_1fr_auto]`
 
 - `grid` set display: grid;
-- `grid-rows-[auto_1fr_auto]` we are deifing a number of rows (3) and their height, with `auto` out top and bottom row will have height to fit the content.
-- `h-screen` sets the height to 100vh, in our case the middle row wil epxand to fit the screen.
+- `grid-rows-[auto_1fr_auto]` we are deifing a number of rows (3) and their height, with `auto` our top and bottom row will adjusts its height to fit its content.
+- `h-screen` sets the height to 100vh, in our case the middle row (1rf) will epxand to fill remaining available space. (check docs for additional height values)
+
+We used `scroll-auto` on the <main> element so when whe height is to small for the content we are forced to scroll. This also leaves the footer of the page on screen, whereas before we had to scroll to the bottom to see the footer. To center the content in <main> we used `mx-auto`, adds margin on the left and right.
+
+### Element States and Transitions
+
+- **Hover state**: In `Cart.jsx` we used `hover:` and specify a class name to apply, in our case `text-blue-600`
+
+- **Transition**: To add we specify `transition-all` or in our case `transition-colors` since we change color on state change. Do add diration we use `duration-300` for 300 milliseconds
+
+- **Focus**: In `CreateOrder.jsx` we use `focus:` and we set `focus:outline-none` and add `focus:ring`. Later the same way we set color to _ring_ and `focus:ring-yellow-400 focus:ring-offset-2`.**_Ring_** is an important concept in **Focus**
+
+- **Active**: Example for active state is `active:bg-blue-400`, here we just set color
+
+- **Disabled**: For disabled state we use `disabled:cursor-not-allowed`
+
+## Styling Forms
+
+Check `SearchOrder.jsx` there we added a lot of css: focus state with transition and a ring. We also use `sm:focus:w-72` where we combine prefixes (change to withd on focus only happens when width is greater than 640px)
+
+- **Border radius**: _rouded-[some value]_, we used `rounded-full` to a get pill shape
+
+- **Placeholder text**: `placeholder:text-stone-400` we can style other thigs not just color
+
+## Reusing styles with @apply
+
+In `index.css` we specify a **_layer component_** where we can define custom class names by combining Tailwinds and reuse them. In this case we created **input** and reused it in `CreateOrder.jsx`.**_This should be utilized too often as it misses the point of Tailwind_**
+
+Another way to reuse styles is to create components with all the styles listed there. Check `Button.jsx` component.
