@@ -56,7 +56,7 @@ For **Dispay** we would just write: `flex`, `grid` etc. We have an example of us
 
 ### Responsive Design
 
-By default Tailwind comes with 5 breakpoints, they are mobile first. There is a whole section in Tailwind docs `Core Concepts > Responsive Design`. We basically prefix any of the tailwind class names with one of the **_breakpoint prefixes_**
+By default Tailwind comes with 5 breakpoints, they are mobile first, **_which means we should always start by designing for a smaller (mobile) screen and then move to larger displays by using the breakpoints_**. There is a whole section in Tailwind docs `Core Concepts > Responsive Design`. We basically prefix any of the tailwind class names with one of the **_breakpoint prefixes_**
 
 - `sm`: 640px => class will be applied when size greater than
 - `md`: 768px => class will be applied when size greater than
@@ -109,3 +109,11 @@ Check `SearchOrder.jsx` there we added a lot of css: focus state with transition
 In `index.css` we specify a **_layer component_** where we can define custom class names by combining Tailwinds and reuse them. In this case we created **input** and reused it in `CreateOrder.jsx`.**_This should be utilized too often as it misses the point of Tailwind_**
 
 Another way to reuse styles is to create components with all the styles listed there. Check `Button.jsx` component.
+
+## Positioning and More...
+
+In `Loader.jsx` we can see **absolute** positioning but also how to add **opacity** and **background blur**. To strech a div to entire viewport we use `inset-0`.
+
+In `tailwind.config.js` file updated and set new values instead of the default. What we do in **_theme_** object overrides everything in that category. if we just **_extend_** than we keep the original things of _tailwind_ but add our own ones. _Keep in mind that for the fontFamily we had to add links in `index.html`_
+
+Example for a **_devider_** can be seen in _Menu.jsx_ `divide-y divide-stone-200`
