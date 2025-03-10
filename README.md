@@ -8,6 +8,8 @@ One of the main subjects of the project are **_Loaders_** and **_Actions_**. **_
 - [Eslint configuration](docs/ESLINT_CONFIG.md)
 - [Code Guide](docs/CODE_GUIDE.md)
 - [Tailwind CSS](docs/TAILWIND_CSS.md)
+- [Redux Overview](docs/REDUX.md)
+- [React Router Advanced Features](docs/REACT_ROUTER.md)
 
 ## How to **plan** and **build** a React application
 
