@@ -31,7 +31,7 @@ When we build lagre and more realworld applications:
 3. The pizza menu can change, so it should be **loaded from an API**
 4. Users can add multiple pizzas to a **cart** before ordering
 5. Ordering requires just the **user's name, phone number and address**
-6. If possible, **GPS location** should also be provided, to make delivery easier
+6. If possible, **GPS location** should also be provided, to make delivery easier <-- INTERESTING FEATURE
 7. User's caan **mark their order as "priority"** for an additional 20% of the cart price
 8. Orders are made by **sending a POST request** with the order data (user data + selected pizzas) to the API
 9. Payments are made on delivery, so **no payment processing** is necessary in the app
